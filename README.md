@@ -1,6 +1,6 @@
 # Multilingual AI Text-to-Speech Assistant
 
-BIT 4543 Artificial Intelligence â€” Group Project 3 (Speech AI)
+BIT 4543 Artificial Intelligence — Group Project 3 (Speech AI)
 
 A web application that automatically detects the language of user-submitted
 text and converts it into natural-sounding speech, with downloadable audio
@@ -14,7 +14,7 @@ output. Built as a course prototype.
 - **Speech synthesis** via gTTS, with the engine layer abstracted so
   alternative engines (Coqui TTS, cloud APIs) can be swapped in.
 - **Translation between any two supported languages** (`src/translator.py`,
-  via `deep-translator`/Google Translate) â€” pick a "translate to" language
+  via `deep-translator`/Google Translate) — pick a "translate to" language
   in the sidebar and the detected/selected text is translated before being
   spoken, e.g. Spanish text spoken aloud in Japanese, or Korean text spoken
   aloud in German.
@@ -25,18 +25,18 @@ output. Built as a course prototype.
 
 ```
 project-name/
-â”œâ”€â”€ data/           # sample multilingual text & test sentences
-â”œâ”€â”€ notebooks/      # experimentation (TTS engine comparison, language-ID tests)
-â”œâ”€â”€ src/            # core modules: language_detect.py, tts_engine.py, audio_utils.py
-â”œâ”€â”€ app/            # Streamlit application (app.py)
-â”œâ”€â”€ models/         # cached/downloaded model artifacts (if applicable)
-â”œâ”€â”€ docs/           # proposal, progress report, final report
-â”œâ”€â”€ results/        # evaluation outputs, MOS scores, latency logs
-â”œâ”€â”€ tests/          # unit tests for detection & synthesis modules
-â”œâ”€â”€ README.md
-â”œâ”€â”€ requirements.txt
-â”œâ”€â”€ LICENSE
-â””â”€â”€ .gitignore
+├── data/           # sample multilingual text & test sentences
+├── notebooks/      # experimentation (TTS engine comparison, language-ID tests)
+├── src/            # core modules: language_detect.py, tts_engine.py, audio_utils.py
+├── app/            # Streamlit application (app.py)
+├── models/         # cached/downloaded model artifacts (if applicable)
+├── docs/           # proposal, progress report, final report
+├── results/        # evaluation outputs, MOS scores, latency logs
+├── tests/          # unit tests for detection & synthesis modules
+├── README.md
+├── requirements.txt
+├── LICENSE
+└── .gitignore
 ```
 
 ## Setup
@@ -66,16 +66,16 @@ pytest tests/
 
 ## How it works
 
-1. **Input** â€” user types or pastes text into the app.
-2. **Language detection** (`src/language_detect.py`) â€” identifies the
+1. **Input** — user types or pastes text into the app.
+2. **Language detection** (`src/language_detect.py`) — identifies the
    language automatically, or the user can select one manually.
-3. **Translation** (`src/translator.py`, optional) â€” if enabled, the text is
+3. **Translation** (`src/translator.py`, optional) — if enabled, the text is
    translated from the detected/selected language into whichever supported
    language the user picks as the "translate to" target.
-4. **Speech synthesis** (`src/tts_engine.py`) â€” the resulting text and
+4. **Speech synthesis** (`src/tts_engine.py`) — the resulting text and
    language (translated, or original if translation is off) are sent to the
    TTS engine (gTTS), which returns audio.
-5. **Output** (`src/audio_utils.py` + `app/app.py`) â€” the audio is played
+5. **Output** (`src/audio_utils.py` + `app/app.py`) — the audio is played
    back in-browser and offered as a downloadable MP3.
 
 ## Supported languages (current scope)
@@ -97,4 +97,4 @@ pytest tests/
 
 ## Team
 
-BIT 4543 Artificial Intelligence â€” Group Project, Project 3.
+BIT 4543 Artificial Intelligence — Group Project, Project 3.
